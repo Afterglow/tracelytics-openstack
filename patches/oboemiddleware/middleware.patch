@@ -1,0 +1,14 @@
+--- middleware.py.orig	2012-10-17 17:18:10.887087036 +0000
++++ middleware.py	2012-10-17 17:19:50.907086156 +0000
+@@ -146,7 +146,9 @@
+ 
+         # gets controller, action
+         for k, v in environ.get('wsgiorg.routing_args', [{},{}])[1].items():
+-            if k in set(("controller", "action")):
+-                evt.add_info(str(k).capitalize(), str(v))
++            if k == "action":
++                 evt.add_info(str(k).capitalize(), str(v))
++            elif k == "controller":
++                 evt.add_info(str(k).capitalize(), str(v.controller))
+ 
+         ctx.end_trace(evt)
