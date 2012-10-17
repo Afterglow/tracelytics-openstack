@@ -6,7 +6,7 @@ Patches to add Tracelytics Oboe middleware to Openstack
 Installing Tracelytics
 ======================
 
-See http://support.tracelytics.com/kb/installation-instructions/installation-overview
+See http://support.tracelytics.com/kb/installation-instructions/installation-overview. Don't forget to install the modified eventlet libraries Tracelytics provide.
 
 Patching Openstack
 ==================
